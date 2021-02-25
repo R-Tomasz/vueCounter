@@ -1,10 +1,15 @@
 <template>
   <div class="item">
     <h4>{{ category.title }}</h4>
-    <p>{{ category.counter }}</p>
-    <button type="button" @click="decrement">-</button>
-    <button type="button" @click="increment">+</button>
-    <button @click="removeCategory">Delete this category</button>
+    <div class="changes">
+      <span class="val">{{ category.counter }}</span>
+
+      <button class="changeVal" type="button" @click="decrement">-</button>
+      <button class="changeVal" type="button" @click="increment">+</button>
+      <button class="deleteCat" @click="removeCategory">
+        Delete this category
+      </button>
+    </div>
   </div>
 </template>
 
